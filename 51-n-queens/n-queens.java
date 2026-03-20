@@ -16,8 +16,7 @@ class Solution {
       ans.add(construct(board));
       return;
     }
-
-    for (int j = 0; j < cols.length; ++j) {
+  for (int j = 0; j < cols.length; ++j) {
       if (cols[j] || diag1[i + j] || diag2[j - i + n - 1])
         continue;
       board[i][j] = 'Q';
@@ -26,6 +25,7 @@ class Solution {
       cols[j] = diag1[i + j] = diag2[j - i + n - 1] = false;
       board[i][j] = '.';
     }
+  
   }
 
   private List<String> construct(char[][] board) {
